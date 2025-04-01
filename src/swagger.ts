@@ -121,6 +121,25 @@ const options = {
                         },
                     },
                 },
+                Classification: {
+                    type: 'object',
+                    required: ['calendarId', 'classificationResult'],
+                    properties: {
+                        calendarId: {
+                            type: 'string',
+                            description: 'ID del calendario clasificado',
+                        },
+                        classificationResult: {
+                            type: 'string',
+                            description: 'Resultado de la clasificación del calendario (e.g. "busy", "available")',
+                        },
+                        timestamp: {
+                            type: 'string',
+                            format: 'date-time',
+                            description: 'Fecha y hora en que se realizó la clasificación',
+                        },
+                    },
+                },
             },
         },
     },

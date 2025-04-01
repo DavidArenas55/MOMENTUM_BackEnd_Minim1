@@ -3,6 +3,7 @@ import userRoutes from './models/users/user.routes';
 import chatRoutes from './models/chats/chat.routes';
 import calendarRoutes from './models/calendari/calendar.routes'; // Importa las rutas de Calendar
 import locationRoutes from './models/location/location.routes';
+import clasificadorRoutes from './models/clasificador/clasificador.routes'; // Importa las rutas del clasificador
 import connectDB from './database';
 import { setupSwagger } from './swagger';
 import cors from "cors";
@@ -30,6 +31,7 @@ app.use('/users', userRoutes); // Rutas de usuarios
 app.use('/chat', chatRoutes);  // Rutas de chats
 app.use('/calendars', calendarRoutes); // Rutas de calendarios
 app.use('/location', locationRoutes); // Rutas de ubicaciones
+app.use('/clasificador', clasificadorRoutes); // Rutas del clasificador
 
 const PORT = 8080;
 app.listen(PORT, () => {
